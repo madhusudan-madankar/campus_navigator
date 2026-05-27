@@ -1,0 +1,133 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    android:padding="20dp"
+    tools:context=".admin.AddLocationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Location"
+            android:textColor="#00BFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="25dp" />
+
+        <!-- Location Name -->
+        <EditText
+            android:id="@+id/etLocationName"
+            android:hint="Location name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_rounded"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#88FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="text" />
+
+        <!-- Coordinates Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:weightSum="2">
+
+            <!-- Latitude -->
+            <EditText
+                android:id="@+id/etLatitude"
+                android:hint="Latitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#88FFFFFF"
+                android:padding="12dp"
+                android:inputType="numberDecimal"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Longitude -->
+            <EditText
+                android:id="@+id/etLongitude"
+                android:hint="Longitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#88FFFFFF"
+                android:padding="12dp"
+                android:inputType="numberDecimal"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Pick from Map Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPickFromMap"
+            android:text="Pick from Map"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_rounded_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/etDescription"
+            android:hint="Description (optional)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_rounded"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#88FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <!-- Image preview -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/image_border"
+            android:scaleType="fitXY"
+            android:contentDescription="Preview"
+            android:src="@drawable/black_blue_camera" />
+
+        <!-- Select Image -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelectImage"
+            android:text="Select Image"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_rounded_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Save Location -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:text="Save Location"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_rounded_blue"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>

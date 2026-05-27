@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/manageConnectionsItem_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source Name"
+                android:textColor="#90CAF9"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/manageConnectionsItem_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destination Name"
+                android:textColor="#E0E0E0"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/manageConnectionsItem_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123.4 m"
+                android:textColor="#BBDEFB"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/manageConnectionsItem_delete"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/delete_icon"
+                android:contentDescription="Delete"
+                app:tint="#F06292"
+                android:padding="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

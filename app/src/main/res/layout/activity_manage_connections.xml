@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manageConnections_mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".admin.ManageConnectionsActivity">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/manageConnections_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="Manage Campus Connections"
+        android:titleTextColor="@android:color/white"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@android:color/white" />
+
+    <!-- Input Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/manageConnections_inputCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#121212">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Source Spinner -->
+            <TextView
+                android:id="@+id/manageConnections_sourceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source Location"
+                android:textColor="#90CAF9"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <Spinner
+                android:id="@+id/manageConnections_sourceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:popupBackground="#1E1E1E"
+                android:foregroundTint="@android:color/darker_gray"
+                android:backgroundTint="#2196F3" />
+
+            <!-- Destination Spinner -->
+            <TextView
+                android:id="@+id/manageConnections_destinationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destination Location"
+                android:textColor="#90CAF9"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <Spinner
+                android:id="@+id/manageConnections_destinationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:popupBackground="#1E1E1E"
+                android:backgroundTint="#2196F3" />
+
+            <!-- Info: Auto Distance -->
+            <!-- Distance Display -->
+            <TextView
+                android:id="@+id/manageConnections_distanceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distance: 0.0 meters"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+
+            <!-- Add Connection Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/manageConnections_addButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Connection"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1565C0"
+                android:layout_marginTop="16dp"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Section Title -->
+    <TextView
+        android:id="@+id/manageConnections_listTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Existing Connections"
+        android:textColor="#BBDEFB"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/manageConnections_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Transparent background so image stays visible -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Blue glowing border -->
+    <stroke
+        android:width="2dp"
+        android:color="#00BFFF" />
+
+    <!-- Rounded corners for smooth look -->
+    <corners android:radius="4dp" />
+
+    <!-- Optional inner shadow-like padding -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+</shape>

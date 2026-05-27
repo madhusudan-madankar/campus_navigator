@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_black">#0A0A0A</color>
+    <color name="accent_blue">#2196F3</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="card_dark">#1C1C1C</color>
+
+    <color name="black_bg">#000000</color>
+    <color name="navy_blue">#001F3F</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="hint_text">#80FFFFFF</color>
+    <color name="blueAccent">#4DB8FF</color>
+    <color name="darkBackground">#0A0F1A</color>`
+
+</resources>
